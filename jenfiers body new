@@ -1,0 +1,208 @@
+
+use_bpm 140
+
+use_synth :prophet;
+
+jessie="C:/Users/Azul_delpino/Desktop/aiduosample.wav"
+jbody="C:/Users/Azul_delpino/Desktop/Ken Carson - Jennifer’s Body (vocals only).wav"
+
+define :main do
+  play :c5
+  sleep 0.5
+  play :c6
+  sleep 0.25
+  play :c5
+  sleep 0.25
+  
+  play :c5
+  sleep 0.5
+  play :f5
+  sleep 0.5
+  
+  play :eb5
+  sleep 0.5
+  play :eb6
+  sleep 0.25
+  play :eb5
+  sleep 0.25
+  
+  play :ab6
+  sleep 0.5
+  play :ab7
+  sleep 0.25
+  play :ab6
+  sleep 0.25
+end
+
+define :drop do
+  play :g5
+  sleep 0.5
+  play :g4
+  sleep 0.25
+  play :g5
+  sleep 0.25
+  
+  play :g5
+  sleep 0.5
+  play :c5
+  sleep 0.5
+  
+  play :eb4
+  sleep 0.5
+  play :eb5
+  sleep 0.25
+  play :eb4
+  sleep 0.25
+  
+  play :g5
+  sleep 0.5
+  play :g5
+  sleep 0.5
+  
+  play :c5
+  sleep 0.5
+  play :c6
+  sleep 0.25
+  play :c5
+  sleep 0.25
+  
+  play :c5
+  sleep 0.5
+  play :f5
+  sleep 0.5
+  
+  play :eb5
+  sleep 0.5
+  play :eb6
+  sleep 0.25
+  play :eb5
+  sleep 0.25
+  
+  play :ab6
+  sleep 0.5
+  play :ab7
+  sleep 0.25
+  play :ab6
+  sleep 0.25
+  
+  
+  
+end
+define :drums do
+  sample :drum_bass_hard, amp: 11
+  sleep 0.2
+  sample :hat_psych
+  sleep 0.5
+  sample :hat_bdu
+  sleep 0.15
+  sample :hat_bdu
+  sleep 0.15
+  sample :drum_cymbal_closed
+  sleep 0.2
+  sample :hat_psych
+  sleep 0.18
+  sample :hat_bdu
+  sleep 0.15
+  sample :hat_bdu
+  sleep 0.15
+end
+
+define :drum do
+  
+  sample :drum_bass_hard, amp: 11
+  sample :hat_bdu
+  sleep 0.28
+  sample :hat_bdu
+  sleep 0.18
+  sample :hat_bdu
+  sleep 0.18
+  sample :hat_bdu
+  sleep 0.16
+  sample :hat_bdu
+  sleep 0.18
+  sample :hat_cats
+  sleep 0.26
+  sample :hat_bdu
+  sleep 0.18
+  sample :hat_bdu
+  sleep 0.18
+  sample :hat_bdu
+  sleep 0.18
+  sample :hat_bdu
+  sleep 0.18
+  sample :hat_bdu
+  sleep 0.18
+  sample :hat_cats
+  sleep 0.28
+end
+
+
+define :fast do
+  sample :hat_bdu
+  sleep 0.5
+  sample :hat_bdu
+  sleep 1
+  sample :hat_bdu
+  sleep 1
+  sample :hat_bdu
+  sleep 1
+  sample :hat_bdu
+  sleep 1
+  sample :hat_cats
+  sleep 1
+  sample :hat_bdu
+  sleep 1
+  sample :hat_bdu
+  sleep 1
+  sample :hat_bdu
+  sleep 1
+  sample :hat_bdu
+  sleep 1
+  sample :hat_bdu
+  sleep 1
+  sample :hat_cats
+  sleep 0.5
+end
+
+
+
+
+
+live_loop :deeZ do
+  sample jessie
+  stop
+end
+sleep 13
+
+live_loop :ken do
+  play main
+  stop
+end
+live_loop :drumkit do
+  play drum
+  stop
+end
+sleep 2
+sleep 4
+
+live_loop :ken2 do
+  play main
+  stop
+end
+live_loop :drumkit2 do
+  play drum
+  stop
+end
+sleep 4
+
+sleep 1.6
+sample :misc_burp, amp: 10
+sleep 2
+
+main
+sleep 0.1
+sample jbody, amp: 10
+5.times do
+  drop
+end
+
